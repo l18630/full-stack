@@ -4,7 +4,21 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "yellow-button": "#FFC000"
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    function ({addUtilities}) {
+      const extendUnderline = {
+          '.underline': {
+              'textDecoration': 'underline',
+              'text-decoration-color': '#FFC000',
+          },
+      }
+      addUtilities(extendUnderline)
+  }
+  ],
 }

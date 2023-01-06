@@ -12,18 +12,19 @@ function Header() {
                     <div>
                         <div>
                             <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
-                                Data to <span> </span>
-                                <Typewriter
-                                    words={['Eat', 'Sleep', 'Code', 'Repeat!']}
-                                    loop={0}
-                                    cursor
-                                    cursorStyle='_'
-                                    typeSpeed={120}
-                                    deleteSpeed={50}
-                                    delaySpeed={1000}
-                                //onLoopDone={handleDone}
-                                //onType={handleType}
-                                />
+                                Fork Dao <span> </span>
+                                    <Typewriter
+                                        words={['is Web3', 'is Community', 'is Learn', 'is Freedom']}
+                                        loop={0}
+                                        cursor
+
+                                        cursorStyle='_'
+                                        typeSpeed={120}
+                                        deleteSpeed={50}
+                                        delaySpeed={1000}
+                                    //onLoopDone={handleDone}
+                                    //onType={handleType}
+                                    />
                             </h1>
                             <ul className="flex gap-8 items-center justify-center py-12">
                                 <li className="inline-flex transition duration-300 ease-in-out border-b-2 border-transparent hover:border-orange-500">
@@ -52,29 +53,7 @@ function Header() {
                                     </Link>
                                 </li>
                             </ul>
-                            <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
 
-                            </p>
-                            <div className="mt-8 flex gap-x-4 sm:justify-center">
-                                <a
-                                    href="#"
-                                    className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
-                                >
-                                    Get started
-                                    <span className="text-indigo-200" aria-hidden="true">
-                                        &rarr;
-                                    </span>
-                                </a>
-                                <a
-                                    href="#"
-                                    className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
-                                >
-                                    Live demo
-                                    <span className="text-gray-400" aria-hidden="true">
-                                        &rarr;
-                                    </span>
-                                </a>
-                            </div>
                         </div>
                         <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
                             <svg

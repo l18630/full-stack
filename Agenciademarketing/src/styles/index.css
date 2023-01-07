@@ -29,3 +29,24 @@ background: #c9c9c9;
 opacity: 6px;
 border-radius: 6px;
 }
+
+
+
+.rec.rec-arrow {
+  background-color: #0B1014;
+  color: #eeeeee;
+  }
+  
+  .rec.rec-arrow:hover {
+  background-color: #393b3f;
+  }
+  
+  .rec.rec-arrow:disabled {
+    visibility: hidden;
+    }
+    
+  .rec-carousel-item:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 1px lightgrey;
+  background-color: #eaeaea;
+  }

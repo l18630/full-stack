@@ -8,11 +8,15 @@ import UseCases from "components/home/UseCases"
 import Footer from "components/navigation/Footer"
 import Navbar from "components/navigation/Navbar"
 import Layout from "hocs/layouts/Layout"
+import { useEffect } from "react"
 
 function Home() {
+        useEffect(()=>{
+            window.scrollTo(0,0)
+        },[])
     return (
         <Layout>
-            <Navbar />
+            <Navbar/>
             <div className="pt-28">
                 <Header/>
                 <Incentives/>
@@ -22,7 +26,7 @@ function Home() {
                 <LogoCloud/>
                 <BlogList/>
             </div>
-            <Footer />
+            <Footer/>
         </Layout>
     )
 }

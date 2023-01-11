@@ -6,12 +6,34 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "yellow-button": "#FFC000"
+        "yellow-button": '#FFC000'
       }
     },
     boxShadow: {
-      navbar: "0px 10px 8px 0px rgba(3, 3, 4, 0.03), 0 1px 2px -1px rgba(3, 3, 4, 0.03)",
-    }
+      navbar: '0px 10px 8px 0px rgba(3, 3, 4, 0.03), 0 1px 2px -1px rgba(3, 3, 4, 0.03)'
+    },
+    screens: {
+      sm: "640px",
+      // => @media (min-width: 640px) { ... }
+
+      md: "768px",
+      // => @media (min-width: 768px) { ... }
+
+      lg: "1090px",
+      // => @media (min-width: 1024px) { ... }
+
+      xl: "1280px",
+      // => @media (min-width: 1280px) { ... }
+
+      "2xl": "1536px",
+      // => @media (min-width: 1536px) { ... }
+
+      "3xl": "1720px",
+      // => @media (min-width: 1536px) { ... }
+
+      "4xl": "1856px",
+      // => @media (min-width: 1536px) { ... }
+    },
   },
   plugins: [
     require("@tailwindcss/forms"),
@@ -20,3 +42,4 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
   ],
 }
+

@@ -8,7 +8,7 @@ function ServicesList({ posts, section_title }) {
                 <div className="absolute inset-0">
                     <div className="h-1/3 bg-gray-50 sm:h-2/3" />
                 </div>
-                <div className="relative mx-auto max-w-7xl">
+                <div className="relative mx-12 max-w-full">
                     <div className="text-left">
                         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{section_title}</h2>
 

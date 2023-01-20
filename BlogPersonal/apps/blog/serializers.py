@@ -1,8 +1,12 @@
 from rest_framework import serializers
 from .models import *
-
+from apps.category.serializers import CategorySerializer
 
 class PostSerializer(serializers.ModelSerializer):
+    """Convert JSON format"""
+
+    category=CategorySerializer()
+
     class Meta: 
         model=Post
         fields=[
@@ -11,7 +15,7 @@ class PostSerializer(serializers.ModelSerializer):
             'slug',
             'thumbnail',
             'description',
-            'content',
+            #'content',
             'time_read',
             'published',
             'views',

@@ -6,7 +6,7 @@ from rest_framework import permissions
 from .models import Post, ViewCount
 from apps.category.models import Category
 
-#from .serializers import PostSerializer, PostListSerializer
+from .serializers import PostSerializer
 
 class BlogListView(APIView):
     permission_classes = (permissions.AllowAny,)

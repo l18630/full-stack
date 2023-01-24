@@ -15,7 +15,7 @@ class PostSerializer(serializers.ModelSerializer):
             'slug',
             'thumbnail',
             'description',
-            #'content',
+            'content',
             'time_read',
             'published',
             'views',

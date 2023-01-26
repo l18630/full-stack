@@ -76,7 +76,7 @@ class PostDetailView(APIView):
             post = Post.objects.get(slug=slug)
             serializer = PostSerializer(post)
 
-             address = request.META.get('HTTP_X_FORWARDED_FOR')
+            address = request.META.get('HTTP_X_FORWARDED_FOR')
             if address:
                 ip = address.split(',')[-1].strip()
             else:

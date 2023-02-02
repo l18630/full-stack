@@ -1,8 +1,22 @@
-import { useLocation } from "react-router-dom"
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline"
+import { Link, useLocation, useNavigate } from "react-router-dom"
+import {useState}from 'react'
 
 function CategoriesHeader({categories}){
 
     const location = useLocation()
+    const navigate = useNavigate()
+
+    //SEARCH
+    const [term, setTerm] = useState("");
+    const handleChange = (e) => {
+        setTerm(e.target.value);
+    };
+    const onSubmit = (e) => {
+        e.preventDefault();
+        setTimeout(() => navigate("/s=" + term), 0.2);
+        setTerm("");
+    };
 
     return(
         <div className="w-full bg-gray-100 py-8" >
@@ -17,15 +31,17 @@ function CategoriesHeader({categories}){
                             className="mx-4 inline-flex space-x-8 sm:mx-6"
             >
 
-                <button 
-                className={`${location.pathname === '/blog' ? "text-orange-500":"text-gray-900"} inline-flex flex-col text-center lg:w-auto py-2 px-6 bg-white text-gray-900 rounded-md text-lg font-regular`}>
+                <Link to="/blog" 
+                className={`${location.pathname === '/blog' ? "text-orange-500 bg-white":"text-gray-900 hover:text-orange-500 border border-gray-100 hover:border-gray-200"} inline-flex flex-col text-center lg:w-auto py-2 px-6 text-gray-900 rounded-md text-lg font-regular`}>
                     All
-                </button>
+                </Link>
                 {
                 categories&&categories.map(category=>(
-                    <>
-                    category
-                    </>
+                    <Link to={`/category/${category.slug}`} 
+                className={`${location.pathname === `/category/${category.slug}` ? "text-orange-500 bg-white":"text-gray-900 border border-gray-100 hover:border-gray-200"} py-2 px-6 rounded-md text-lg font-regular`}>
+
+                    {category.name}
+                </Link>
 
                 ))
                 }
@@ -34,9 +50,26 @@ function CategoriesHeader({categories}){
                 </div>   
             </div> 
             </div>
-            <div className="col-span-2">
-                Search
-            </div>
+            <form onSubmit={(e) => onSubmit(e)} className="relative col-span-2 mr-8">
+             <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+             <i className='bx bx-search-alt text-xl text-gray-800'></i>
+             </div>
+             <input
+                 id='search'
+                 name='search'
+                 value={term}
+                 onChange={(e)=>handleChange(e)}
+                 type='search'
+                 className={`
+                            py-2.5 pl-10 pr-3 
+                            block w-full rounded-md
+                            border border-gray-200
+                            focus:border-gray-200 focus:ring-gray-200
+                            focus:outline-none focus:ring-1
+                            placeholder-gray-600 focus:placeholder-gray-500
+                        `}
+                    />
+            </form>
         </div>
         </div>
 

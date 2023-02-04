@@ -15,6 +15,7 @@ function Search({
     count,
     next,
     previous,
+    search_blog
 
 }) {
 
@@ -67,6 +68,5 @@ const mapStateToProps=state=>({
 
 })
 export default connect(mapStateToProps,{
-
-
+    search_blog
 }) (Search)

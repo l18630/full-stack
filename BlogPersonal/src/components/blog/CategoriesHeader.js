@@ -19,7 +19,7 @@ function CategoriesHeader({categories}){
     };
 
     return(
-        <div className="w-full bg-gray-100 py-8" >
+        <div className="w-full bg-gray-100 py-5" >
             <div className="grid grid-cols-12">
             <div className="col-span-10">
 
